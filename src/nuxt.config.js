@@ -13,8 +13,13 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
+    script: [
+      { src: 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'},
+      { src: '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' }
+    ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href:'//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'}
     ]
   },
 
@@ -33,6 +38,7 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~plugins/aux.js'
   ],
 
   /*
